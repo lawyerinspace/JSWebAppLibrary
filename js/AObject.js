@@ -45,7 +45,7 @@ class AObject {
     append(object){
         this.next = this.visit({
             empty: (listItem, parameter) => listItem,
-            notEmpty: (listItem, parameter) => listItem.getNext().append(parameter));
+            notEmpty: (listItem, parameter) => listItem.getNext().append(parameter)
         }, object);
 
         return this;

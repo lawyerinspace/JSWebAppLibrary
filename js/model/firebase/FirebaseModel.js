@@ -1,4 +1,4 @@
-import { AModel } from '../AModel.js';
+import { AModel } from '../library.js';
 
 class FirebaseModel extends AObject {
     constructor(firebaseConfig) {

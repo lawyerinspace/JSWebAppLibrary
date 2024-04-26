@@ -1,4 +1,4 @@
-import { ADatabase } from '../ADatabase.js';
+import { ADatabase } from '../library.js';
 
 class FirebaseDatabase extends ADatabase {
     constructor(firebaseApp) {

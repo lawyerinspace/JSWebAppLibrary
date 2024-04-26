@@ -1,7 +1,7 @@
 // Import abstract classes from the model folder
-import { AModel } from './AModel.js';
-import { ADatabase } from './ADatabase.js';
-import { AUpload } from './AUpload.js';
+import { FirebaseDatabase } from './FirebaseDatabase.js';
+import { FirebaseModel } from './FirebaseModel.js';
+import { FirebaseUpload } from './FirebaseUpload.js';
 
 // Export abstract classes
-export { AModel, ADatabase, AUpload };
+export { FirebaseDatabase, FirebaseModel, FirebaseUpload };

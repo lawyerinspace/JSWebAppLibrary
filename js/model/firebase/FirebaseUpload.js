@@ -1,4 +1,4 @@
-import { AUpload } from '../AUpload.js';
+import { AUpload } from '../library.js';
 
 class FirebaseUpload extends AUpload {
     constructor(firebaseApp) {
