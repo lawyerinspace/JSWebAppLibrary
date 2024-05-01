@@ -11,6 +11,20 @@ class AElement extends AObject {
         return this.element;
     }
 
+    setId(id) {
+        this.element.id = id;
+        return this;
+    }
+
+    getId() {
+        return this.element.id;
+    }
+
+    setText(text) {
+        this.element.innerText = text;
+        return this;
+    }
+
     appendTo(element) {
         element.append(this);
         return this;
