@@ -1,8 +1,8 @@
-import { AElement } from './AElement.js';
-import { Header } from './Header.js';
-import { Navigation } from './Navigation.js';
-import { Article } from './Article.js';
-import { Footer } from './Footer.js';
+import { AElement } from './element/AElement.js';
+import { Header } from './element/Header.js';
+import { Navigation } from './element/Navigation.js';
+import { Article } from './element/Article.js';
+import { Footer } from './element/Footer.js';
 
 class AppView extends AElement {
     constructor() {
@@ -37,7 +37,7 @@ class AppView extends AElement {
     }
 
     execute(strategy, param) {
-        return strategy.appView(this, param);
+        return strategy.view(this, param);
     }
 }
 

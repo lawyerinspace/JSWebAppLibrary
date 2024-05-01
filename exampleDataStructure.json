@@ -1,0 +1,181 @@
+{
+    "prototypes": {
+      "objects": {
+        "basicObject": {
+          "id": "",
+          "type": "",
+          "parents": [],
+          "children": [],
+          "properties": {}
+        },
+        "module": {
+          "id": "",
+          "name": "",
+          "keyword": "",
+          "views": [
+            {
+              "viewName": "Default View",
+              "view": "linkToViewType"
+            }
+          ],
+          "datatypes": []
+        }
+      },
+      "views": {
+        "tab": {
+          "type": "tab",
+          "tabs": [
+            {
+              "label": "Overview",
+              "view": "linkToOtherViewType"
+            },
+            {
+              "label": "Details",
+              "view": "linkToOtherViewType"
+            }
+          ]
+        },
+        "list": {
+          "type": "list",
+          "elements": [
+            {
+              "field": "name",
+              "label": "Name",
+              "type": "text",
+              "sort": true,
+              "filter": true
+            }
+          ],
+          "actions": [
+            { "action": "edit", "label": "Edit", "method": "GET" }
+          ]
+        },
+        "record": {
+          "type": "record",
+          "fields": [
+            {
+              "field": "description",
+              "label": "Description",
+              "type": "textarea"
+            },
+            {
+              "field": "image",
+              "label": "Profile Image",
+              "type": "file"
+            }
+          ],
+          "fieldTypes": {
+            "textarea": {
+              "description": "Multiline text input for longer entries."
+            },
+            "file": {
+              "description": "Field for uploading files, such as images."
+            },
+            "text": {
+              "description": "Basic text input field."
+            }
+          }
+        },
+        "form": {
+          "type": "form",
+          "elements": [
+            {
+              "field": "email",
+              "label": "Email",
+              "type": "email"
+            },
+            {
+              "field": "password",
+              "label": "Password",
+              "type": "password"
+            }
+          ],
+          "actions": [
+            { "action": "submit", "label": "Submit", "method": "POST" }
+          ],
+          "fieldTypes": {
+            "text": {
+              "description": "Basic text input field."
+            },
+            "email": {
+              "description": "Input field validated for email addresses."
+            },
+            "password": {
+              "description": "Field for entering passwords, with characters hidden on input."
+            },
+            "checkbox": {
+              "description": "Field for toggling a binary option."
+            },
+            "radio": {
+              "description": "Field for selecting one option from multiple choices."
+            },
+            "file": {
+              "description": "Field for uploading files."
+            },
+            "date": {
+              "description": "Input field for selecting dates."
+            }
+          }
+        },
+        "wizard": {
+          "type": "wizard",
+          "steps": [
+            {
+              "stepLabel": "Setup",
+              "view": "linkToFormViewType"
+            }
+          ],
+          "actions": [
+            { "action": "next", "label": "Next", "method": "POST" },
+            { "action": "finish", "label": "Finish", "method": "POST" }
+          ]
+        },
+        "gallery": {
+          "type": "gallery",
+          "images": [
+            {
+              "src": "urlToImage",
+              "alt": "Image Description"
+            }
+          ]
+        },
+        "timeline": {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "2024-05-01",
+              "description": "Milestone Achieved"
+            }
+          ]
+        },
+        "post": {
+          "type": "post",
+          "content": [
+            {
+              "text": "Example text here...",
+              "style": "paragraph"
+            },
+            {
+              "text": "Main heading",
+              "style": "header"
+            }
+          ],
+          "fieldTypes": {
+            "text": {
+              "description": "Used for standard text entries."
+            },
+            "image": {
+              "description": "Used for embedding images within posts."
+            }
+          }
+        }
+      },
+      "modules": {},
+      "datatypes": {},
+      "database": {
+        "records": {},
+        "reference": {}
+      }
+    }
+  }
+  

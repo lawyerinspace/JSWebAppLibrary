@@ -1,4 +1,4 @@
-import { AElement } from '../AElement.js';
+import { AElement } from './AElement.js';
 
 class Footer extends AElement {
     constructor() {

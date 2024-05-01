@@ -1,4 +1,4 @@
-// TableHead.js
+// ATableContainer.js
 import { AElement } from '../../AElement.js';
 
 class ATableContainer extends AElement {

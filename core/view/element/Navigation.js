@@ -1,4 +1,4 @@
-import { AElement } from '../AElement.js';
+import { AElement } from './AElement.js';
 
 class Navigation extends AElement {
     constructor() {

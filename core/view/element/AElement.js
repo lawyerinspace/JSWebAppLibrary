@@ -1,5 +1,5 @@
-import { AObject } from '../AObject.js';
-import { ActiveViewState, InactiveViewState } from './state/library.js';
+import { AObject } from '../../AObject.js';
+import { ActiveViewState, InactiveViewState } from '../state/library.js';
 
 class AElement extends AObject {
     constructor(tagName) {
