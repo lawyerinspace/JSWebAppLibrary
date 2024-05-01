@@ -66,6 +66,10 @@ class Video extends AElement {
         this.element.volume = volume;
         return this;
     }
+
+    execute(strategy, param) {
+        return strategy.video(this, param);
+    }
 }
 
 export { Video };

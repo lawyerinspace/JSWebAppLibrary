@@ -17,6 +17,10 @@ class Image extends AElement {
         this.element.alt = alt || '';
         return this;
     }
+
+    execute(strategy, param) {
+        return strategy.image(this, param);
+    }
 }
 
 export { Image };

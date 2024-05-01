@@ -14,8 +14,8 @@ class ActiveViewState extends AState {
         return new InactiveViewState();
     }
 
-    execute(strategy, element) {
-        return strategy.active(element);
+    execute(strategy, element, param) {
+        return strategy.active(element, param);
     }
 }
 

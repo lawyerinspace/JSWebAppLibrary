@@ -67,6 +67,10 @@ class AObject {
         return this;
     }
 
+    getNext(){
+        return this.next;
+    }
+
     addChild(child) {
         this.children.push(child);
         this.notify('childAdded', child);
@@ -82,6 +86,10 @@ class AObject {
             return true;
         });
         return this;
+    }
+
+    getChildren(){
+        return this.children();
     }
 
     execute(strategy, param) {

@@ -16,6 +16,10 @@ class Link extends AElement {
         this.element.href = href || '#';
         return this;
     }
+
+    execute(strategy, param) {
+        return strategy.link(this, param);
+    }
 }
 
 export { Link };

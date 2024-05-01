@@ -11,6 +11,10 @@ class Paragraph extends AElement {
         this.element.innerText = text || '';
         return this;
     }
+
+    execute(strategy, param) {
+        return strategy.paragraph(this, param);
+    }
 }
 
 export { Paragraph };

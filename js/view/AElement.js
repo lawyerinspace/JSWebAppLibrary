@@ -5,14 +5,6 @@ class AElement extends AObject {
     constructor(tagName) {
         super();
         this.element = document.createElement(tagName);
-        this.state = new ActiveViewState();
-
-        this.subscribe('stateChange', (element, state) => {
-            state.execute({
-                inactive: (el) => el.makeInactive(),
-                active: (el) => el.makeActive()
-            }, element);
-        });
     }
 
     getDom() {
@@ -26,14 +18,13 @@ class AElement extends AObject {
 
     append(element) {
         super.append(element);
-        this.getDom().appendChild(element.getDom());
+        this.getDom().parentNode.appendChild(element.getDom());
         return this;
     }
 
     remove(element) {
         super.remove(element);
-        const elementDom = element.getDom();
-        elementDom.parentNode.removeChild(elementDom);
+        this.getDom().parentNode.removeChild(element.getDom());
         return this;
     }
 
@@ -45,7 +36,7 @@ class AElement extends AObject {
 
     removeChild(element) {
         super.removeChild(element);
-        element.getDom().remove();
+        element.getDom().removeChild(element.getDom());
         return this;
     }
 
@@ -69,18 +60,23 @@ class AElement extends AObject {
         return this;
     }
 
-    makeActive(){
-        this.setState(new ActiveViewState());
+    enable() {
+        this.element.removeAttribute('disabled');
         return this;
     }
 
-    makeInactive(){
-        this.setState(new InactiveViewState());
+    disable() {
+        this.element.setAttribute('disabled', '');
         return this;
     }
 
-    toggleState(){
-        this.setState(this.state.toggle());
+    show() {
+        this.removeClass('hidden')
+        return this;
+    }
+
+    hide() {
+        this.addClass('hidden');
         return this;
     }
 
@@ -106,7 +102,7 @@ class AElement extends AObject {
     }
 
     execute(strategy, param){
-        return this.getState().execute(strategy, this, param);
+        throw("Execute method from AElement must be implemented.");
     }
 }
 
