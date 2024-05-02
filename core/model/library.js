@@ -1,7 +1,6 @@
-// Import abstract classes from the model folder
-import { AModel } from './AModel.js';
 import { ADatabase } from './ADatabase.js';
+import { AModel } from './AModel.js';
 import { AUpload } from './AUpload.js';
+import { DataTypeFactory } from './DataTypeFactory.js';
 
-// Export abstract classes
-export { AModel, ADatabase, AUpload };
+export { ADatabase, AModel, AUpload, DataTypeFactory };
